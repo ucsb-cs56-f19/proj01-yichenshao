@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Map;
 import java.util.HashMap;
-import hello.geojson.FeatureCollection;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
@@ -64,8 +63,6 @@ public class WebController {
         // TODO: Actually do the search here and add results to the model
 	String json = e.getJSON(eqSearch.getDistance(),eqSearch.getMinmag());
 	model.addAttribute("json",json);
-        FeatureCollection featureCollection = FeatureCollection.fromJSON(json);
-        model.addAttribute("featureCollection",featureCollection);
         return "earthquakes/results";
     }
     
