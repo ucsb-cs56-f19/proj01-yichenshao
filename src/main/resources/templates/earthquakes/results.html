@@ -9,41 +9,27 @@
       <div th:replace="bootstrap/bootstrap_nav_header.html"></div>
 
        <h1>Earthquake Search Results</h1>
-
-       <table>
-            <tr>
-                <th>Distance (km)</th>
-                <td th:text="${eqSearch.distance}"></td>
-            </tr>
-            <tr>
-                <th>Minimum Magnitude</th>
-                <td th:text="${eqSearch.minmag}"></td>
-            </tr>
-       </table>
        
-	<h2> Results</h2>
-
-        <table>
+        <table class="table">
             <thead>
-                <tr>
-                  <th>Type</th>
-		  <th>Url</th>
-		  <th>Count</th>
+              <tr>
+		<th>Distance (km)</th>
+		<th>Minimum Magnitude</th>
 		  <th>Title</th>
+		  <th>Count</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                  <td th:text="${featureCollection.type}"></td>
-		  <td th:text="${featureCollection.metadata.url}"></td>
+              <tr>
+		<td th:text="${eqSearch.distance}"></td>
+		<td th:text="${eqSearch.minmag}"></td>
+		  <td><a th:href="${featureCollection.metadata.url}" th:text="${featureCollection.metadata.title}"></a></td>
 		  <td th:text="${featureCollection.metadata.count}"></td>
-		  <td th:text="${featureCollection.metadata.title}"></td>
                 </tr>
             </tbody>
         </table>
-        <pre th:text="${json}">This is placeholder</pre>
 	<h3>Earthquakes</h3>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>id</th>
