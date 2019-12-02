@@ -1,8 +1,8 @@
-Link to web page of documentation:https://ucsb-cs56-f19.github.io/lab07-yichenshao/
+Link to web page of documentation:https://ucsb-cs56-f19.github.io/proj01-yichenshao/
 
 Link to Heroku web page: https://cs56-f19-lab07-yichenshao.herokuapp.com
 
-Link to Travis-CI page: https://travis-ci.org/ucsb-cs56-f19/lab07-yichenshao
+Link to Travis-CI page: https://travis-ci.org/ucsb-cs56-f19/proj01-yichenshao
 
 A simple Spring Boot webapp using:
 * Thymeleaf templating
