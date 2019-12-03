@@ -10,10 +10,17 @@
 
        <h1>Location Search Results</h1>
        <table class="table">
+	 <thead>
          <tr>
              <th>Location</th>
-             <td th:text="${locSearch.location}"></td>
          </tr>
+	 </thead>
+	 <tbody>
+	   <tr>
+	     <td th:text="${locSearch.location}"></td>
+	   </tr>
+	 </tbody>
+	 
      </table>
 
      <h2>Location Search Results</h2>
@@ -28,7 +35,7 @@
            </tr>
          </thead>
          <tbody>
-           <tr th:each="p: ${place}"> 
+           <tr th:each="p: ${places}"> 
 
              <td th:text="${p.place_id}"></td>
              <td th:text="${p.lat}"></td>
