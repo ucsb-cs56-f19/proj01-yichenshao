@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Map;
 import java.util.HashMap;
 import earthquakes.geojson.FeatureCollection;
-//import earthquakes.services.EarthquakeQueryService;
-//import earthquakes.searches.EqSearch;
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
 @Controller
