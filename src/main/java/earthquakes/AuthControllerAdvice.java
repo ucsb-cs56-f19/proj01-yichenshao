@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import earthquakes.services.MembershipService;
+import earthquakes.controllers.*;
 @ControllerAdvice
 public class AuthControllerAdvice {
 
