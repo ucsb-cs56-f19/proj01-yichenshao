@@ -1,4 +1,4 @@
-!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" lang="en"> 
   <head>
     <title>Location Search</title>
@@ -13,7 +13,7 @@
       <form action="#" th:action="@{/locations/results}" th:object="${locSearch}" method="get">
         <table>
           <tr class="form-group">
-            <th><label for="location" class="col-form-label">Location</label></th>
+            <th><label for="location" class="col-form-label">Locations</label></th>
             <td><input type="text" th:field="*{location}" class="form-control" id="location" /></td>
           </tr>
         </table>
