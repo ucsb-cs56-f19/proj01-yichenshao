@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Map;
 import java.util.HashMap;
 //import earthquakes.osm.Place;
-//port earthquakes.services.LocationQueryService;
+import earthquakes.services.LocationQueryService;
 import earthquakes.geojson.FeatureCollection;
 import earthquakes.searches.LocSearch;
 import java.util.List;
@@ -30,17 +30,17 @@ public class LocationsController {
         return "locations/search";
     }
 
-    /* @GetMapping("/locations/results")
+    @GetMapping("/locations/results")
           public String getLocationsResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,
             LocSearch locSearch) {
         LocationQueryService e = new LocationQueryService();
         model.addAttribute("locSearch", locSearch);
         String json = e.getJSON(locSearch.getLocation());
         model.addAttribute("json", json);
-	List<Place> places = Place.listFromJSON(json);
-        model.addAttribute("places", places);
+	//List<Place> places = Place.listFromJSON(json);
+        //model.addAttribute("places", places);
         return "locations/results";
     }
-    */
+    
 
 }
