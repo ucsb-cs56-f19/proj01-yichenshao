@@ -11,7 +11,7 @@ public class EqSearch{
     public int getMinmag(){return this.minmag;}
     public double getLat(){return this.lat;}
     public double getLon(){return this.lon;}
-    public Srting getLocation(){return this.location;}
+    public String getLocation(){return this.location;}
 
     public void setDistance(int a){this.distance = a;}
     public void setMinmag(int a){this.minmag = a;}
