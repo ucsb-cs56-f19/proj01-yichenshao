@@ -20,6 +20,7 @@ import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 import earthquakes.osm.Place;
 import earthquakes.repositories.LocationRepository;
 import earthquakes.entities.Location;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class LocationsController {
@@ -53,6 +54,12 @@ public class LocationsController {
          model.addAttribute("locations", locations);
          return "locations/index";
     }
-    
+
+    @PostMapping("/locations/add")
+    public String add(Location location, Model model) {
+      locationRepository.save(location);
+      model.addAttribute("locations", locationRepository.findAll());
+      return "locations/index";
+    }
 
 }
