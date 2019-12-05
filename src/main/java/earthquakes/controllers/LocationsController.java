@@ -18,11 +18,16 @@ import earthquakes.searches.EqSearch;
 import java.util.List;
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 import earthquakes.osm.Place;
+import earthquakes.repositories.LocationRepository;
+import earthquakes.entities.Location;
 
 @Controller
 public class LocationsController {
     @Autowired
     private ClientRegistrationRepository clientRegistrationRepository;
+
+    @Autowired
+    private LocationRepository locationRepository;
     
     @GetMapping("/locations/search")
     public String getLocationsSearch(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,
@@ -40,6 +45,13 @@ public class LocationsController {
 	List<Place> places = Place.listFromJson(json);
         model.addAttribute("places", places);
         return "locations/results";
+    }
+
+    @GetMapping("/locations")
+     public String index(Model model) {
+         Iterable<Location> locations= locationRepository.findAll();
+         model.addAttribute("locations", locations);
+         return "locations/index";
     }
     
 
